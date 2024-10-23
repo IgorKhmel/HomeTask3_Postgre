@@ -1,0 +1,26 @@
+select genrename, count(genreid) from genre 
+join genresinger on genre.genreid = genresinger.genreid
+group by genrename
+
+select count(albumname) from track
+join album on track.albumid = album.albumid
+where year between 2019 and 2020
+
+select albumname, avg(duration) from track
+join album on track.albumid = album.albumid
+group by albumname
+
+select singername from singer 
+join singrealbum on singer.singerid = singrealbum.singerid 
+join album on album.albumid = singrealbum.albumid 
+where year not in 2020
+group by singername
+
+select collectionname from collection
+join SongCollection on SongCollection.collectionid = collection.collectionid
+join track on SongCollection.trackid = track.trackid
+join album on track.albumid = album.albumid
+join singrealbum on singrealbum.albumid = album.albumid
+join singer on singrealbum.singerid = singer.singerid
+where singername = 'ACDC'
+group by collectionname

@@ -1,0 +1,19 @@
+select trackname, max(duration)
+from track
+group by trackname
+
+select trackname
+from track
+where duration > (3.5*60)
+
+select collectionname
+from collection 
+where year between 2018 and 2020
+
+select singername
+from singer
+having count(singername) = 1
+
+select trackname
+from track
+where trackname like '%MY%' or trackname like '%МОЙ%'

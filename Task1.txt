@@ -1,0 +1,42 @@
+Insert into singer(singerid, singername) values (1, N'ACDC');
+Insert into singer(singerid, singername) values (2, N'BASTA');
+Insert into singer(singerid, singername) values (3, N'RUKIVVERH');
+Insert into singer(singerid, singername) values (4, N'KIPELOV');
+
+Insert into genresinger(genreid, singerid) values (1, 1);
+Insert into genresinger(genreid, singerid) values (2, 3);
+Insert into genresinger(genreid, singerid) values (3, 2);
+Insert into genresinger(genreid, singerid) values (4, 1);
+
+Insert into genre(genreid, genrename) values (1, N'ROCK');
+Insert into genre(genreid, genrename) values (2, N'POP');
+Insert into genre(genreid, genrename) values (3, N'RAP');
+
+Insert into singrealbum(albumid, singerid) values (1, 1);
+Insert into singrealbum(albumid, singerid) values (1, 2);
+Insert into singrealbum(albumid, singerid) values (2, 3);
+Insert into singrealbum(albumid, singerid) values (2, 4);
+
+Insert into album(albumid, albumname, year) values (1, N'ACDCalbum', 1990);
+Insert into album(albumid, albumname, year) values (2, N'BASTAalbum', 2018);
+Insert into album(albumid, albumname, year) values (3, N'RUKIVVERHalbum', 2019);
+Insert into album(albumid, albumname, year) values (4, N'KIPELOValbum', 2020);
+
+Insert into track(trackid, trackname, duration, albumid) values (1, N'TNT', 240, 1);
+Insert into track(trackid, trackname, duration, albumid) values (2, N'MY', 300, 2);
+Insert into track(trackid, trackname, duration, albumid) values (3, N'МОЙ', 280, 3);
+Insert into track(trackid, trackname, duration, albumid) values (4, N'SVOBODEN', 310, 4);
+Insert into track(trackid, trackname, duration, albumid) values (5, N'ARYA', 220, 4);
+Insert into track(trackid, trackname, duration, albumid) values (6, N'VIPUSKNOU', 270, 2);
+
+Insert into SongCollection(trackid, collectionid) values (1, 1);
+Insert into SongCollection(trackid, collectionid) values (2, 2);
+Insert into SongCollection(trackid, collectionid) values (3, 3);
+Insert into SongCollection(trackid, collectionid) values (4, 4);
+Insert into SongCollection(trackid, collectionid) values (5, 4);
+Insert into SongCollection(trackid, collectionid) values (6, 2);
+
+Insert into collection(collectionid, collectionname, year) values (1, N'collection_1', 1990);
+Insert into collection(collectionid, collectionname, year) values (2, N'collection_2', 2007);
+Insert into collection(collectionid, collectionname, year) values (3, N'collection_3', 2002);
+Insert into collection(collectionid, collectionname, year) values (4, N'collection_4', 2009);
